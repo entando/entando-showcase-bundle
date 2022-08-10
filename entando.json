@@ -1,0 +1,119 @@
+{
+    "microservices": [
+        {
+            "name": "my-service",
+            "stack": "spring-boot",
+            "healthCheckPath": "/health"
+        },
+        {
+            "name": "another-ms",
+            "stack": "spring-boot",
+            "healthCheckPath": "/health",
+            "commands": {
+                "run": "mvn -Dspring-boot.run.arguments=\"--server.port=8082\" spring-boot:run"
+            },
+            "roles": ["another-ms-user"]
+        }
+    ],
+    "microfrontends": [
+        {
+            "name": "jeff-mfe",
+            "customElement": "jeff-mfe",
+            "stack": "react",
+            "type": "app-builder",
+            "group": "free",
+            "nav": [
+                {
+                    "label": {
+                        "en": "Content Template",
+                        "it": "Content Template"
+                    },
+                    "target": "internal",
+                    "url": "/content-template"
+                }
+            ],
+            "slot": "content",
+            "paths": [
+                "/content-template"
+            ],
+            "apiClaims": [
+                {
+                    "name": "int-api",
+                    "type": "internal",
+                    "serviceName": "my-service"
+                }
+            ]
+        },
+        {
+            "name": "another-mfe",
+            "customElement": "another-mfe",
+            "stack": "react",
+            "type": "widget",
+            "group": "free",
+            "titles": {
+                "en": "Another MFE",
+                "it": "Un altro MFE"
+            },
+            "contextParams": [
+                "page_code"
+            ],
+            "commands": {
+                "run": "npm install && PORT=3001 npm start"
+            },
+            "apiClaims": [
+                {
+                    "name": "int-api",
+                    "type": "internal",
+                    "serviceName": "another-ms"
+                },
+                {
+                    "name": "ext-api",
+                    "type": "external",
+                    "serviceName": "simple-ms",
+                    "bundle": "registry.hub.docker.com/soniaent/entando-simple-bundle"
+                }
+            ],
+            "params": [
+                {
+                    "name": "username",
+                    "description": "username of user"
+                },
+                {
+                    "name": "description",
+                    "description": "description of user"
+                }
+            ],
+            "configMfe": "another-mfe-config"
+        },
+        {
+            "name": "another-mfe-config",
+            "customElement": "another-mfe-config",
+            "stack": "react",
+            "type": "widget-config",
+            "group": "free",
+            "commands": {
+                "run": "npm install && PORT=3002 npm start"
+            }
+        }
+    ],
+    "name": "entando-showcase-bundle",
+    "description": "This is an awesome bundle demonstrating the power of Entando bundles",
+    "version": "1.0.0",
+    "type": "bundle",
+    "svc": [
+        "mysql",
+        "keycloak"
+    ],
+    "global": {
+        "nav": [
+            {
+                "label": {
+                    "en": "Entando Developers",
+                    "it": "Entando Developers"
+                },
+                "target": "external",
+                "url": "https://developer.entando.com/"
+            }
+        ]
+    }
+}

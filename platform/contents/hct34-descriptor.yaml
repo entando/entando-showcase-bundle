@@ -1,0 +1,33 @@
+id: HCT34
+typeCode: HCT
+description: Hello From Jeff's Bundle
+mainGroup: free
+groups:
+  - free
+status: PUBLIC
+categories:
+  - jeff_bundle_category
+attributes:
+  - code: title
+    value: null
+    values:
+      en: Hello From Jeff's Bundle
+    elements: []
+    compositeelements: []
+    listelements: {}
+  - code: content
+    value: null
+    values:
+      en: This is some content
+    elements: []
+    compositeelements: []
+    listelements: {}
+  - code: image
+    value: null
+    values:
+      en:
+        correlationCode: '36'
+        name: entando-architecture.jpg
+    elements: []
+    compositeelements: []
+    listelements: {}

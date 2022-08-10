@@ -1,0 +1,33 @@
+code: jeff_s_bundle_page
+parentCode: homepage
+titles:
+  en: Jeff's Bundle Page
+  it: Jeff's Bundle Page
+pageModel: hello_page_template
+ownerGroup: free
+joinGroups: []
+displayedInMenu: true
+seo: false
+charset: utf-8
+status: published
+widgets:
+  - code: logo
+    config: null
+    pos: 0
+  - code: navigation-menu
+    config: null
+    pos: 1
+  - code: search_form
+    config: null
+    pos: 2
+  - code: keycloak-login
+    config: null
+    pos: 3
+  - code: content_viewer
+    config:
+      contentDescription: Hello From Jeff's Bundle
+      modelId: '98989'
+      ownerGroup: free
+      contentId: HCT34
+      joinGroups: '[]'
+    pos: 4

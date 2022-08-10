@@ -1,0 +1,9 @@
+version: '3.1'
+
+services:
+  custom:
+    image: jboss/keycloak:latest
+    restart: always
+    environment:
+      DB_DATABASE: test4-keycloak
+      DB_USER: test4

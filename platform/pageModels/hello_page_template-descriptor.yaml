@@ -1,0 +1,129 @@
+code: hello_page_template
+description: Hello Page Template
+configuration:
+  frames:
+    - pos: 0
+      description: Logo
+      mainFrame: false
+      defaultWidget:
+        code: logo
+        properties: null
+      sketch:
+        y1: 0
+        x2: 2
+        y2: 0
+        x1: 0
+    - pos: 1
+      description: Navigation Menu
+      mainFrame: false
+      defaultWidget:
+        code: navigation-menu
+        properties: null
+      sketch:
+        y1: 0
+        x2: 5
+        y2: 0
+        x1: 3
+    - pos: 2
+      description: Search
+      mainFrame: false
+      defaultWidget:
+        code: search_form
+        properties: null
+      sketch:
+        y1: 0
+        x2: 8
+        y2: 0
+        x1: 6
+    - pos: 3
+      description: Login
+      mainFrame: false
+      defaultWidget:
+        code: keycloak-login
+        properties: null
+      sketch:
+        y1: 0
+        x2: 11
+        y2: 0
+        x1: 9
+    - pos: 4
+      description: Frame 1
+      mainFrame: false
+      sketch:
+        y1: 1
+        x2: 5
+        y2: 1
+        x1: 0
+    - pos: 5
+      description: Frame 2
+      mainFrame: false
+      sketch:
+        y1: 1
+        x2: 11
+        y2: 1
+        x1: 6
+    - pos: 6
+      description: Frame 3
+      mainFrame: false
+      sketch:
+        y1: 2
+        x2: 5
+        y2: 2
+        x1: 0
+    - pos: 7
+      description: Frame 4
+      mainFrame: false
+      sketch:
+        y1: 2
+        x2: 11
+        y2: 2
+        x1: 6
+    - pos: 8
+      description: Frame 5
+      mainFrame: false
+      sketch:
+        y1: 3
+        x2: 5
+        y2: 3
+        x1: 0
+    - pos: 9
+      description: Frame 6
+      mainFrame: false
+      sketch:
+        y1: 3
+        x2: 11
+        y2: 3
+        x1: 6
+    - pos: 10
+      description: Frame 7
+      mainFrame: false
+      sketch:
+        y1: 4
+        x2: 5
+        y2: 4
+        x1: 0
+    - pos: 11
+      description: Frame 8
+      mainFrame: false
+      sketch:
+        y1: 4
+        x2: 11
+        y2: 4
+        x1: 6
+    - pos: 12
+      description: Frame 9
+      mainFrame: false
+      sketch:
+        y1: 5
+        x2: 5
+        y2: 5
+        x1: 0
+    - pos: 13
+      description: Frame 10
+      mainFrame: false
+      sketch:
+        y1: 5
+        x2: 11
+        y2: 5
+        x1: 6
+templatePath: hello_page_template.ftl
