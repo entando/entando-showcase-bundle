@@ -70,7 +70,7 @@
                     "name": "ext-api",
                     "type": "external",
                     "serviceName": "simple-ms",
-                    "bundle": "registry.hub.docker.com/soniaent/entando-simple-bundle"
+                    "bundle": "registry.hub.docker.com/entando/entando-simple-ms-bundle"
                 }
             ],
             "params": [
