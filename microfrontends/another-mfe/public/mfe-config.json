@@ -5,7 +5,7 @@
                 "url": "http://localhost:8082"
             },
             "ext-api": {
-                "url": "http://test-fire.apps.mainline.eng-entando.com/cecchisandrone/simple-ms"
+                "url": "http://quickstart-entando.awsentando.net/entando-simple-ms-bundle-3a0eefc4/simple-ms"
             }
         }
     },

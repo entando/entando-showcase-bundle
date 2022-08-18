@@ -12,7 +12,9 @@
             "commands": {
                 "run": "mvn -Dspring-boot.run.arguments=\"--server.port=8082\" spring-boot:run"
             },
-            "roles": ["another-ms-user"]
+            "roles": [
+                "another-ms-user"
+            ]
         }
     ],
     "microfrontends": [
