@@ -9,6 +9,7 @@
         </title>
         <meta name="viewport" content="width=device-width,  user-scalable=no" />
         <link rel="icon" href="${appUrl}favicon.png" type="image/png" />
+        <link rel="stylesheet" href="<@wp.resourceURL />bundles/entando-showcase-bundle-c0e268b3/resources/css/rainbow.css" rel="stylesheet">
         <!-- Custom OOTB page template styles -->
         <link rel="stylesheet" href="<@wp.resourceURL />static/css/ootb/page-templates/index.css" rel="stylesheet">
         <!-- Carbon Design System -->
@@ -30,7 +31,7 @@
           </header-fragment>
           <div class="bx--grid Homepage__body">
             <div class="bx--row">
-              <div class="bx--col-sm-4 bx--col-md-4 bx--no-gutter">
+              <div class="bx--col-sm-4 bx--col-md-4 bx--no-gutter rainbow">
                   <div><@wp.show frame=4 /></div>
                   <div><@wp.show frame=6 /></div>
                   <div><@wp.show frame=8 /></div>
