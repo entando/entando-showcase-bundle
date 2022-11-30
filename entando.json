@@ -100,7 +100,7 @@
     ],
     "name": "entando-showcase-bundle",
     "description": "This is an awesome bundle demonstrating the power of Entando bundles",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "type": "bundle",
     "svc": [
         "keycloak"
