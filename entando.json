@@ -104,6 +104,7 @@
             "type": "widget",
             "group": "free",
             "publicFolder": "public",
+            "buildFolder": "dist",
             "titles": {
                 "en": "angular-mfe",
                 "it": "angular-mfe"

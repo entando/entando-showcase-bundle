@@ -4,8 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "bundle": "cat dist/angular-mfe-unbundled/{polyfills,runtime,main}.js > dist/angular-mfe.js && mv dist/angular-mfe-unbundled/styles.css dist/styles.css",
-    "build": "ng build --output-hashing=none && npm run bundle",
+    "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
