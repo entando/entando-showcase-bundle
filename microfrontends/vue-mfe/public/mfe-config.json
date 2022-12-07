@@ -1,0 +1,19 @@
+{
+  "systemParams": {
+      "api": {
+          "int-api": {
+              "url": "http://localhost:8082"
+          },
+          "ext-api": {
+              "url": "http://quickstart-entando.awsentando.net/entando-simple-ms-bundle-6aa5c95b/simple-ms"
+          }
+      }
+  },
+  "contextParams": {
+      "page_code": "my_mfe_page"
+  },
+  "params": {
+      "username": "adionisi",
+      "description": "Tech Lead Entando"
+  }
+}
