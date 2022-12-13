@@ -96,6 +96,45 @@
             "commands": {
                 "run": "npm install && PORT=3002 npm start"
             }
+        },
+        {
+            "name": "angular-mfe",
+            "customElement": "angular-mfe",
+            "stack": "angular",
+            "type": "widget",
+            "group": "free",
+            "publicFolder": "public",
+            "buildFolder": "dist",
+            "titles": {
+                "en": "angular-mfe",
+                "it": "angular-mfe"
+            },
+            "contextParams": [
+                "page_code"
+            ],
+            "apiClaims": [
+                {
+                    "name": "int-api",
+                    "type": "internal",
+                    "serviceName": "another-ms"
+                },
+                {
+                    "name": "ext-api",
+                    "type": "external",
+                    "serviceName": "simple-ms",
+                    "bundle": "registry.hub.docker.com/entando/entando-simple-ms-bundle"
+                }
+            ],
+            "params": [
+                {
+                    "name": "username",
+                    "description": "username of user"
+                },
+                {
+                    "name": "description",
+                    "description": "description of user"
+                }
+            ]
         }
     ],
     "name": "entando-showcase-bundle",

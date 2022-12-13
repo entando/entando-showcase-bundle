@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>AngularMfe</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body onLoad="onLoad();">
+  <angular-mfe></angular-mfe>
+  <script>
+    function injectConfigIntoMfe() {
+      fetch('mfe-config.json').then(async response => {
+        const config = await response.text()
+        const angularMfeEl = document.getElementsByTagName('angular-mfe')[0]
+        angularMfeEl.setAttribute('config', config)
+      })
+    }
+
+    injectConfigIntoMfe()
+  </script>
+  <script src="%NG_APP_KEYCLOAK_URL%/js/keycloak.js"></script>
+  <script>
+    const onLoad = (function() {
+      function createKcDispatcher(payload) {
+        return () => window.dispatchEvent(new CustomEvent('keycloak', { detail: payload }));
+      }
+
+      function initKeycloak() {
+        const keycloak = Keycloak({
+          url: '%NG_APP_KEYCLOAK_URL%',
+          realm: '%NG_APP_KEYCLOAK_REALM%',
+          clientId: '%NG_APP_KEYCLOAK_CLIENT_ID%',
+        });
+
+        keycloak.onReady = createKcDispatcher({ eventType: 'onReady' });
+        keycloak.onAuthSuccess = createKcDispatcher({ eventType: 'onAuthSuccess' });
+        keycloak.onAuthError = createKcDispatcher({ eventType: 'onAuthError' });
+        keycloak.onAuthRefreshSuccess = createKcDispatcher({ eventType: 'onAuthRefreshSuccess' });
+        keycloak.onAuthRefreshError = createKcDispatcher({ eventType: 'onAuthRefreshError' });
+        keycloak.onAuthLogout = createKcDispatcher({ eventType: 'onAuthLogout' });
+        keycloak.onTokenExpired = createKcDispatcher({ eventType: 'onTokenExpired' });
+        const onInit = createKcDispatcher({ eventType: 'onInit' });
+
+        window.entando = {
+          ...(window.entando || {}),
+          keycloak,
+        };
+        window.entando.keycloak
+          .init({ onLoad: 'login-required' })
+          .success(onInit);
+      }
+
+      return initKeycloak;
+    })();
+
+    window.entando = {
+      ...(window.entando || {}),
+    };
+    window.entando.widgets = {
+      ...(window.entando.widgets || {}),
+    };
+    window.entando.widgets['angular-mfe'] = {
+      basePath: "http://quickstart-entando.awsentando.net/entando-de-app/cmsresources/jeff-ent-bundle/angular-mfe/"
+    };
+  </script>
+</body>
+</html>
