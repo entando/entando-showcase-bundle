@@ -33,8 +33,8 @@ class AnotherMfeConfig extends React.Component {
           <ReactLogo className="App-logo" />
           MFE Form
         </header>
-          <div><label htmlFor="username">Username:</label> <input id="username" name="username" onChange={e => this.handleChangeUsername(e.target.value)} defaultValue={username} /></div>
-          <div><label htmlFor="description">Description:</label> <input id="description" name="description" onChange={e => this.handleChangeDescription(e.target.value)} defaultValue={description} /></div>
+          <div><label htmlFor="username">Username:</label> <input id="username" name="username" onInput={e => this.handleChangeUsername(e.target.value)} defaultValue={username} /></div>
+          <div><label htmlFor="description">Description:</label> <input id="description" name="description" onInput={e => this.handleChangeDescription(e.target.value)} defaultValue={description} /></div>
       </div>
     );
   }
