@@ -14,6 +14,12 @@
             },
             "roles": [
                 "another-ms-user"
+            ],
+            "permissions": [
+                {
+                    "clientId": "realm-management",
+                    "role": "view-realm"
+                }
             ]
         }
     ],
@@ -100,7 +106,7 @@
     ],
     "name": "entando-showcase-bundle",
     "description": "This is an awesome bundle demonstrating the power of Entando bundles",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "type": "bundle",
     "svc": [
         "keycloak"
